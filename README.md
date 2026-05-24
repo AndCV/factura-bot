@@ -1,22 +1,22 @@
-# 📄 Factura Bot
+# Factura Bot
 
 Automated tool for downloading, parsing, and forwarding Costa Rican electronic invoices (facturas electrónicas) from Gmail. Built for businesses that receive XML + PDF invoices from Hacienda CR and need to consolidate them into a monthly Excel report and forward them to an accounting inbox.
 
 ---
 
-## ✨ Features
+## Features
 
-- 📥 **Downloads invoices** from Gmail via IMAP for any selected date
-- 📊 **Parses XML** from Hacienda CR (extracts invoice number, date, amount, IVA, issuer)
-- 📁 **Generates a monthly Excel report** with all invoice data
-- 📧 **Forwards each invoice** as a separate email (with original subject and body) to a destination inbox
-- 🗓️ **Date picker UI** to select any past date
-- 🚫 **Skips PDF-only emails** and Hacienda acknowledgement XMLs automatically
-- 🖥️ **Runs as a standalone `.exe`** on Windows (no Python required on target machine)
+- **Downloads invoices** from Gmail via IMAP for any selected date
+- **Parses XML** from Hacienda CR (extracts invoice number, date, amount, IVA, issuer)
+- **Generates a monthly Excel report** with all invoice data
+- **Forwards each invoice** as a separate email (with original subject and body) to a destination inbox
+- **Date picker UI** to select any past date
+- **Skips PDF-only emails** and Hacienda acknowledgement XMLs automatically
+- **Runs as a standalone `.exe`** on Windows (no Python required on target machine)
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 factura_bot/
@@ -32,7 +32,7 @@ factura_bot/
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ### 1. Install Python
 Download Python 3.11+ from https://python.org  
@@ -71,7 +71,7 @@ TIPOS_VALIDOS     = ["Combustible", "Compra", "GPS", "Diésel", "Servicio", "Otr
 
 ---
 
-## ▶️ Running the App
+## Running the App
 
 ### GUI mode (recommended)
 ```bash
@@ -86,7 +86,7 @@ python main.py --carpeta C:\path\     # Process local XML/PDF files
 
 ---
 
-## 📊 Excel Output
+## Excel Output
 
 A file is created per month: `facturas_2026-05.xlsx`
 
@@ -106,7 +106,7 @@ A **Resumen** sheet is also generated with monthly totals.
 
 ---
 
-## 📦 Building a Windows Executable
+## Building a Windows Executable
 
 ```bash
 pip install pyinstaller
@@ -117,7 +117,7 @@ The `.exe` will be in `dist/FacturaBot.exe`. Right-click → **Send to → Deskt
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 | Error | Solution |
 |-------|----------|
@@ -129,7 +129,7 @@ The `.exe` will be in `dist/FacturaBot.exe`. Right-click → **Send to → Deskt
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.11+
 - `anthropic>=0.40.0` (installed but not actively used — reserved for future PDF parsing)
@@ -138,7 +138,7 @@ The `.exe` will be in `dist/FacturaBot.exe`. Right-click → **Send to → Deskt
 
 ---
 
-## 🇨🇷 Notes for Costa Rica
+## Notes for Costa Rica
 
 This tool is designed for **comprobantes electrónicos** issued under the Hacienda CR XML schema (v4.3). It reads the following fields directly from XML:
 - `NumeroConsecutivo` — invoice number
@@ -151,6 +151,6 @@ Acknowledgement files (`Acuse_Recibo`, `RespuestaHacienda`, `xml_confirmacion`) 
 
 ---
 
-## 📄 License
+## License
 
 MIT
